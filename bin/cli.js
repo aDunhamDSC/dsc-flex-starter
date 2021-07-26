@@ -16,7 +16,7 @@ const runCommand = (command) => {
 const repoName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/aDunhamDSC/dsc-flex-starter ${repoName}`;
 const installDepsCommand = `cd ${repoName} &&  npm install`;
-const removeGitCommand = `cd ${repoName} rm -rf .git`;
+const removeGitCommand = `cd ${repoName} && rm -rf .git`;
 
 console.log(`Cloning the repository with name ${repoName}`);
 const checkedOut = runCommand(gitCheckoutCommand);
