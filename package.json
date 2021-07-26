@@ -1,0 +1,12 @@
+{
+  "name": "create-dsc-flex",
+  "version": "1.0.0",
+  "description": "Our flex builder, to minimize files ",
+  "main": "index.js",
+  "bin": "./bin/cli.js",
+  "scripts": {
+    "awesome": "awesome-command"
+  },
+  "author": "adrian_dunham@discovery.com",
+  "license": "ISC"
+}
