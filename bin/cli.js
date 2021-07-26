@@ -16,6 +16,7 @@ const runCommand = (command) => {
 const repoName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/aDunhamDSC/dsc-flex-starter ${repoName}`;
 const installDepsCommand = `cd ${repoName} &&  npm install`;
+const removeGitCommand = `cd ${repoName} rm -rf .git`;
 
 console.log(`Cloning the repository with name ${repoName}`);
 const checkedOut = runCommand(gitCheckoutCommand);
@@ -24,6 +25,10 @@ if(!checkedOut) process.exit(-1);
 console.log(`Installing Dependencies for ${repoName}`);
 const installDeps = runCommand(installDepsCommand);
 if(!installDeps) process.exit(-1);
+
+console.log(`Removing git from ${repoName}`);
+const removeGit = runCommand(removeGitCommand);
+if(!removeGit) process.exit(-1);
 
 console.log(`Congratulations! You are ready to start. Follow commands to start`);
 console.log(`cd ${repoName} && npm start`)
